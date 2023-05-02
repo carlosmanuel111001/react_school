@@ -111,7 +111,174 @@
               <input name={name} type={type} className="form-control" id={id} disabled/>
           </div>
       );
-    }  
+    }
+    
+    var Formulario =()=>{
+      var ops = ["si", "no"]
+      return (
+        <div className="px-4 text-center">
+          <div className="container">
+            <main>
+              <h4 className="mb-3 mt-2">Registro de Matricula</h4>
+              <form className="needs-validation mt-5" action="https://formsubmit.co/carlos1110fuentes@gmail.com" method="POST" noValidate id="form">
+                <div className="row g-3">
+
+                  <Input col="col-lg-5"
+                  f="nombreAlumno"
+                  text="Nombre del Alumno:"
+                  name="Nombre-Alumno"
+                  type="text"
+                  id="nombreAlumno"
+                  placeholder="Ingrese su nombre"
+                  textIF="su nombre"/>
+
+                  <Input col="col-lg-5"
+                  f="apellidoAlumno"
+                  text="Apellido del Alumno:"
+                  name="Apellido-Alumno"
+                  type="text"
+                  id="apellidoAlumno"
+                  placeholder="Ingrese su Apellido"
+                  textIF="su apellido"/>
+
+                  <Input col="col-lg-5"
+                  f="cedulaAlumno"
+                  text="Cedula del Alumno:"
+                  name="Cedula-Alumno"
+                  type="number"
+                  id="cedulaAlumno"
+                  placeholder="Ingrese su cedula"
+                  textIF="su cedula"/>
+
+                  <Input col="col-lg-5"
+                  f="emailAlumno"
+                  text="Email del Alumno:"
+                  name="Email-Alumno"
+                  type="email"
+                  id="emailAlumno"
+                  placeholder="Ingrese su email"
+                  textIF="su email"/>
+
+                  <Input col="col-lg-5"
+                  f="telefonoAlumno"
+                  text="Telefono del Alumno:"
+                  name="Telefono-Alumno"
+                  type="number"
+                  id="telefonoAlumno"
+                  placeholder="Ingrese su telefono"
+                  textIF="su telefono"/>
+
+                  <Input col="col-lg-5"
+                  f="discapacidadAlumno"
+                  text="Discapacidad del Alumno:"
+                  name="Discapacidad-Alumno"
+                  type="text"
+                  id="discapacidadAlumno"
+                  placeholder="Ingrese su discapacidad"
+                  textIF="su discapacidad"/>
+
+                  <Input col="col-lg-5"
+                  f="edadAlumno"
+                  text="Edad del Alumno:"
+                  name="Edad-Alumno"
+                  type="number"
+                  id="edadAlumno"
+                  placeholder="Ingrese su edad"
+                  textIF="su edad"/>
+
+                  <Input col="col-lg-5"
+                  f="añoAlumno"
+                  text="Año del Alumno:"
+                  name="Año-Alumno"
+                  type="number"
+                  id="añoAlumno"
+                  placeholder="Ingrese su año"
+                  textIF="su año"/>
+
+                  <Input col="col-lg-5"
+                  f="promedioAlumno"
+                  text="Promedio del Alumno:"
+                  name="Promedio-Alumno"
+                  type="number"
+                  id="promedioAlumno"
+                  placeholder="Ingrese su Promedio"
+                  textIF="su promedio"/>
+
+                  <Input col="col-lg-5"
+                  f="nombreTutor"
+                  text="Nombre del Tutor:"
+                  name="Nombre-Tutor"
+                  type="text"
+                  id="nombreTutor"
+                  placeholder="Ingrese nombre del Tutor"
+                  textIF="nombre del tutor"/>
+
+                  <Input col="col-lg-5"
+                  f="apellidoTutor"
+                  text="Apellido del Tutor:"
+                  name="Apellido-Tutor"
+                  type="text"
+                  id="apellidoTutor"
+                  placeholder="Ingrese apellido del tutor"
+                  textIF="apellido del tutor"/>
+
+                  <Input col="col-lg-5"
+                  f="direccion"
+                  text="Direccion Domiciliar:"
+                  name="Direccion-domiciliar"
+                  type="text"
+                  id="direccion"
+                  placeholder="Ingrese su direccion"
+                  textIF="su direccion"/>
+
+                  <Input col="col-lg-5"
+                  f="telefono"
+                  text="Telefono:"
+                  name="Telefono"
+                  type="number"
+                  id="telefono"
+                  placeholder="Ingrese su telefono"
+                  textIF="su telefono"/>
+
+                  <Input col="col-lg-5"
+                  f="salario"
+                  text="Salario:"
+                  name="Salario"
+                  type="number"
+                  id="salario"
+                  placeholder="Ingrese su salario"
+                  textIF="su salario"/>
+
+                  <Input col="col-lg-5"
+                  f="numeroHijos"
+                  text="Numero de Hijos:"
+                  name="Numero-Hijos"
+                  type="number"
+                  id="numeroHijos"
+                  placeholder="Ingrese cuantos Hijos"
+                  textIF="sus Hijos"/>
+
+                  <hr className="mt-5"></hr>
+                  <button type="submit" className="btn btn-primary btn-lg" onclick="">GENERAR MATRICULA</button>
+
+                </div>
+              </form>
+            </main>
+          </div>
+        </div>
+      );
+    }
+
+    var HomePage = () => {
+      return (
+          <div className="px-4 text-center">
+              <Encabezado />
+              <Formulario />
+          </div>
+      );
+  }
+  
+  ReactDOM.render(<HomePage />, app);
     </script>
 
     <script
