@@ -279,6 +279,108 @@
   }
   
   ReactDOM.render(<HomePage />, app);
+
+  // Logica de Validacion
+  (()=>{
+    'use strict'
+    const forms = document.querySelectorAll('.needs-validation')
+    Array.from(forms).forEach(form =>{
+        form.addEventListener('submit', event => {
+            if (!form.checkValidity()){
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            else{
+              const doc = new jsPDF();
+
+            let fecha="11-10-2022";
+
+            let nombreAlumno = document.getElementById("nombreAlumno").value;
+
+            let apellidoAlumno =document.getElementById("apellidoAlumno").value;
+
+            let cedulaAlumno =document.getElementById("cedulaAlumno").value;
+
+            let emailAlumno =document.getElementById("emailAlumno").value;
+
+            let telefonoAlumno =document.getElementById("telefonoAlumno").value;
+
+            let discapacidadAlumno =document.getElementById("discapacidadAlumno").value;
+
+            let edadAlumno =document.getElementById("edadAlumno").value;
+
+            let añoAlumno =document.getElementById("añoAlumno").value;
+
+            let promedioAlumno =document.getElementById("promedioAlumno").value;
+
+            let nombreTutor =document.getElementById("nombreTutor").value;
+
+            let apellidoTutor =document.getElementById("apellidoTutor").value;
+
+            let direccion =document.getElementById("direccion").value;
+
+            let telefono =document.getElementById("telefono").value;
+
+            let salario =document.getElementById("salario").value;
+
+            let numeroHijos =document.getElementById("numeroHijos").value;
+
+
+            doc.setFillColor(28, 41, 51);
+            doc.rect(0, 0, 220, 60, 'f');
+             //doc.addImage(ImageData, 10, 8, 106, 34);
+            doc.setFontSize(14);
+            doc.setFontType("bold");
+            doc.setTextColor(22, 225, 255);
+            doc.text('COLEGIO: REGISTRO DE MATRICULA  2023',12, 50);
+            let counter = 90
+            doc.setTextColor(37, 40, 80);
+
+
+            doc.text(`Nombre del Alumno: ` + nombreAlumno,12,102);
+
+            doc.text(`Apellido del Alumno: ` + apellidoAlumno,12,110);
+
+            doc.text(`Cedula del Alumno: ` + cedulaAlumno,12,118);
+
+            doc.text(`Email del Alumno: ` + emailAlumno,12,126);
+
+            doc.text(`Telefono del Alumno: ` + telefonoAlumno,12,134);
+
+            doc.text(`Discapacidad del Alumno: ` + discapacidadAlumno,12,142);
+
+            doc.text(`Edad del Alumno: ` + edadAlumno,12,150);
+
+            doc.text(`Año del Alumno: ` + añoAlumno,12,158);
+
+            doc.text(`Promedio del Alumno: ` + promedioAlumno,12,166);
+
+            doc.text(`Nombre del tutor: ` + nombreTutor,12,174);
+
+            doc.text(`Apellido del tutor: ` + apellidoTutor,12,182);
+
+            doc.text(`Direccion: ` + direccion,12,190);
+
+            doc.text(`Telefono: ` + telefono,12,198);
+
+            doc.text(`Salario: ` + salario,12,206);
+
+            doc.text(`Numero de Hijos: ` + numeroHijos,12,214);
+
+
+            let partes = fecha.split('-');
+
+            var fechadoc = partes[2]+ '-'+ partes[1]+ '-' + partes[0];
+
+            const docpdf = `${nombreAlumno} ${apellidoAlumno} ${fechadoc}.pdf`;
+            doc.save(docpdf); 
+            }
+            
+            form.classList.add('was-validated')
+
+        }, false)
+    })
+})()
     </script>
 
     <script
